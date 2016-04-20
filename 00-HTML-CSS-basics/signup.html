@@ -5,18 +5,17 @@
   <title>Sign Up</title>
  </head>
 <body>
-<form>
 <p>First name:
- <input type="text"></input> Write your name.
+ <input type="text" required=""/> Write your name.
 </p>
 <p>Last name:
- <input type="text"></input> Write your last name.
+ <input type="text" required=""/> Write your last name.
 </p>
 <p>Email:
- <input type="text"></input> Need to be a valid email.
+ <input type="email" required=""/> Need to be a valid email.
 </p>
 <p>Birthday:
- <input type="date"></input> Put your birthdate.
+ <input type="date" required=""/> Put your birthdate.
 </p>
 <p>Description:
  <br>
@@ -24,30 +23,22 @@
  Small bio about you.
 </p>
 <p>Favorite Sport:
- <select>
- <option value=""></option>
-  <optgroup label="Water">
-    <option value="Polo">Polo</option>
-    <option value="Surf">Surf</option>
-    <option value="Bodyboard">Bodyboard</option>
-  </optgroup>
-  <optgroup label="Ground">
-    <option value="BMX">BMX</option>
-    <option value="Skateboard">Skateboard</option>
-    <option value="Motocross">Motocross</option>
-    <option value="Football">Football</option>
-    <option value="Rugby">Rugby</option>
-  </optgroup>
-  <optgroup label="Wind">
-    <option value="Windsurf">Windsurf</option>
-    <option value="Skyboard">Skyboard</option>
-    <option value="Skydiving">Skydiving</option>
-  </optgroup>
- </select>
- Choose your favorite sport.
+ <input type="text"/> Write your favorite sport from the list.
+ <ul>
+    <li>Polo</li>
+    <li>Surf</li>
+    <li>Bodyboard</li>
+    <li>BMX</li>
+    <li>Skateboard</li>
+    <li>Motocross</li>
+    <li>Football</li>
+    <li>Rugby</li>
+    <li>Windsurf</li>
+    <li>Skyboard</li>
+    <li>Skydiving</li>
+ </ul>
 </p>
 <button type="submit" value="Submit">Send</button>
 <button type="reset" value="Reset">Reset</button>
-</form>
 </body>
 </html>
