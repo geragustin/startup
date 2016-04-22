@@ -1,0 +1,50 @@
+Q: How could you add weight to the global font definition to win over the classes added by point 3?
+A: I tried to define the font size using "*" and i can see who replaced all the font-size who defined in each id/class.
+Example:
+*{
+ font-size:40px;
+ }
+
+Q:Imagine there is a declaration like class=”oh-no-inline-styles” style=”background:red” and you need to change the background to green without changing the inline style. How could you accomplish this?
+A: If the declaration is directly written in the body of the html, is impossible to do that because all style declared here overwrite the css style declaration (example1). So, if the declaration is written in the css file, you need to write it directly in the body of your html (example2).
+Examples:
+1- 	 HTML FILE
+<nav id="main-nav" class="blocks" style="background: red">  
+  <ul>
+   <p>Navegation Section</p>
+    <li>Option 1</li>
+    <li>Option 3</li>
+    <li>Option 4</li>
+    <li>Option 5</li>
+    <li>Option 6</li>
+  </ul>
+  </nav>
+	 CSS FILE	
+#main-nav {
+ float: left;
+ margin-right: 2%;
+ width: 23%;
+ font-size: 12px;
+ background-color: green;
+}
+Image: http://puu.sh/orTgj/44844c2ffc.png
+2- 	 HTML FILE
+<nav id="main-nav" class="blocks" style="background: green">  
+  <ul>
+   <p>Navegation Section</p>
+    <li>Option 1</li>
+    <li>Option 3</li>
+    <li>Option 4</li>
+    <li>Option 5</li>
+    <li>Option 6</li>
+  </ul>
+  </nav>
+	 CSS FILE	
+#main-nav {
+ float: left;
+ margin-right: 2%;
+ width: 23%;
+ font-size: 12px;
+ background-color: red;
+}
+Image: http://puu.sh/orTks/1751abacee.png
