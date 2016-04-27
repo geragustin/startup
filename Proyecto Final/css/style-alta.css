@@ -5,9 +5,87 @@
 }
 /* Small screens (default) */
 @media (max-width: 639px){
-html {
-  font-size: 100%;
-  background-color: gray;
+html, body {
+    margin: 0;
+    min-height: 100%;
+}
+body {
+    position: relative;
+    background: #gray;
+    color: #fff;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+.modal {
+    width: 90%;
+    height: 500px;
+    line-height: 40px;
+    position: fixed;
+    top: 10%; 
+    left: 5%;
+    background-color: #f1c40f;
+    border-radius: 5px;
+    z-index: 11;
+}
+
+.peli {
+  width: 100%;
+  height: 40px;
+  margin-top: -2%;
+  border-bottom: 1px solid black;
+}
+.peli h2 {
+  margin-left: 2%;
+}
+#titulo {
+  float: left;
+  font-size: 15px;
+  margin-left: 2%;
+}
+.titulo {
+  margin-left: 2%;
+}
+#estreno {
+  float: left;
+  font-size: 15px;
+  margin-left: 2%;
+}
+.fecha {
+  width: 50%;
+  margin-left: 2%;
+}
+#categoria {
+  float: left;
+  font-size: 15px;
+  margin-left: 2%;
+}
+#puntos {
+  float: left;
+  font-size: 15px;
+  margin-left: 2%;
+}
+#descripcion {
+    float: left;
+    margin: 2%;
+}
+.descripcion{
+  clear: right;
+  width: 80%;
+  margin-left: 5%;
+}
+.botones {
+    margin-left: 50%;
+}
+.titulo {
+    height: 28px;
+    width: 30%;
 }
 .main-header{
   height: 200px;
@@ -69,17 +147,13 @@ html {
 html, body {
     margin: 0;
     min-height: 100%;
+    font-size: 112%;
 }
-
 body {
-    position: relative; /* needed for the overlay to extend when you scroll */
-    /* general styles */
-    font-family: 'Open Sans', sans-serif;
+    position: relative;
     background: #f1c40f;
     color: #fff;
 }
-
-/* overlay styles, all needed */
 .overlay {
     position: absolute;
     top: 0;
@@ -89,18 +163,16 @@ body {
     background-color: rgba(0,0,0,0.5);
     z-index: 10;
 }
-
-/* just some content with arbitrary styles for explanation purposes */
 .modal {
-    width: 700px;
+    width: 600px;
     height: 500px;
-    line-height: 50px;
+    line-height: 40px;
     position: fixed;
-    top: 8%; 
-    left: 25%;
+    top: 18%; 
+    left: 5%;
     background-color: #f1c40f;
     border-radius: 5px;
-    z-index: 11; /* 1px higher than the overlay layer */
+    z-index: 11;
 }
 .peli {
     width: 100%;
@@ -113,35 +185,40 @@ body {
 }
 #titulo {
     float: left;
-    margin-left: 10%;
+    margin-left: 8%;
     margin-right: 1%;
     font-size: 15px;
 }
 .fecha {
     float: right;
-    width: 55%;
+    width: 49%;
     height: 40px;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 #estreno {
     float: right;
-    margin-right: 4%;
+    margin-right: 10%;
     font-size: 15px;
 }
 #categoria {
-    clear: left;
-    margin-left: 5%;
+    float: left;
+    margin-left: 7%;
     font-size: 15px;
+}
+#puntos {
+  clear: right;
+  margin-left: 25%;
+  font-size: 15px;
 }
 #descripcion {
     margin-left: 5%;
 }
 .descripcion{
+    width: 80%;
     margin-left: 5%;
 }
 .botones {
-    float: right;
-    margin-right: 5%;
+    margin-left: 68%;
 }
 .titulo {
     height: 28px;
@@ -152,7 +229,7 @@ body {
   background-color: black;
 }
 .main-header ul {
-  width: 44%;
+  width: 49%;
   height: 50px;
   position: relative;
   top:100px;
@@ -236,8 +313,30 @@ footer {
 
 /* Large screens (1024px) */
 @media (min-width: 1024px){
-html {
-  font-size: 120%;
+html, body {
+    font-size: 120%;
+}
+.modal {
+    width: 700px;
+    height: 500px;
+    top: 8%; 
+    left: 25%;
+}
+#titulo {
+    margin-left: 10%;
+}
+.fecha {
+    width: 52%;
+}
+#puntos {
+  margin-left: 31%;
+}
+.descripcion{
+    width: 80%;
+    margin-left: 5%;
+}
+.botones {
+    margin-left: 70%;
 }
 .main-header li {
   padding: 15px;
