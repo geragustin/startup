@@ -28,19 +28,56 @@ html {
     border-radius: 15px;
     background-color: gold;
 }
-.estreno {
-  width:50%;
-  height: 150px;
+
+.navegacion {
+  clear: left;
+  top: 5%;
+  width: 100%;
+  height: 30px;
   margin-top: 5%;
-  margin-left: 25%;
-  margin-bottom: 5%;
-  background-color: yellow;
 }
-.container p {
-  text-decoration-color: blue;
-  text-align: justify;
-  background-color: black;
-  color: red;
+.navegacion .orden {
+  list-style-type: none;
+  margin: 0;
+}
+.navegacion .orden li {
+  float: left;
+  width: 100px;
+  background-color: blue;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 0.2%;
+  margin-bottom: 2%;
+  font-size: 13px;
+  text-align: center;
+}
+.navegacion .orden li:first-of-type{
+  border-left: 1px solid black;
+}
+.navegacion form {
+  clear: left;
+  margin-left: 20%;
+  font-size: 13px;
+}
+.pelicula-cuerpo {
+  width: 50%;
+  list-style-type: none;
+  position: relative;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.pelicula-img{
+  height: 100px;
+  background-color: red;
+}
+.pelicula-title{
+  font-size: 15px;
+  font-style: italic;
+}
+.pelicula-resume{
+  font-size: 13px;
+  font-style: italic;
 }
 .media {
   width: 80%;
@@ -66,9 +103,6 @@ html {
 }
 /* Medium screens (640px) */
 @media (min-width: 640px){
-html {
-  font-size: 110%;
-}
 .main-header{
   height: 150px;
   background-color: black;
@@ -98,32 +132,58 @@ html {
   height: 480px;
   background-color: gray;
 }
-.estreno {
-  float: left;
-  width: 20%;
-  height: 250px;
-  margin-top: 8%;
-  margin-left: 3%;
-  background-color: gold;
-}
-.banner {
-  float: left;
-  width: 25%;
-  height: 400px;
-  background-color: gold;
-  margin-left:3%;
-  margin-top: 2%;
-}
-.texto p {
-  clear: left;
+.navegacion {
   position: relative;
-  text-align: left;
+  
+  width: 100%;
+  height: 30px;
+  margin-top: 1%;
+}
+.navegacion .orden {
+  list-style-type: none;
   margin: 0;
-  width: 65%;
-  left: 3%;
-  top: -70px;
+}
+.navegacion .orden li {
+  float: left;
+  width: 80px;
+  background-color: blue;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 0.2%;
   font-size: 13px;
-  background-color: black;
+  text-align: center;
+}
+.navegacion .orden li:first-of-type{
+  border-left: 1px solid black;
+}
+.navegacion form {
+  float: right;
+  margin: 0.2%;
+  margin-right: 15%;
+  font-size: 13px;
+}
+.pelicula-cuerpo {
+  float: left;
+  width: 16%;
+  list-style-type: none;
+  position: relative;
+  margin-top: 2%;
+  margin-bottom: 0%;
+}
+.pelicula-img{
+  width: 100%;
+  height: 120px;
+  background-color: red;
+}
+.pelicula-title{
+  font-size: 13px;
+    line-height: 10px;
+  font-style: italic;
+}
+.pelicula-resume{
+  font-size: 11px;
+  font-style: italic;
 }
 .footer-container {
   width: 100%;
@@ -135,7 +195,7 @@ html {
   width: 15%;
   height: 105px;
   background-color: red;
-  margin-top: 1%;
+  margin-top: 0.5%;
   margin-left: 3%;
 }
 .box {
@@ -159,25 +219,36 @@ footer {
 
 /* Large screens (1024px) */
 @media (min-width: 1024px){
-html {
-  font-size: 120%;
-}
 .main-header li {
   padding: 15px;
 }
 .container {
   height: 600px;
 }
-.estreno {
-  width: 20%;
-  height: 350px;
-  margin-top: 8%;
+.navegacion .orden {
+  list-style-type: none;
+  margin: 0;
 }
-.banner {
-  height: 530px;
+.navegacion .orden li {
+  width: 120px;
+  font-size: 16px;
 }
-.texto p {
-  font-size: 17px;
+.navegacion .orden li:first-of-type{
+  border-left: 1px solid black;
+}
+.navegacion form {
+  float: right;
+  margin-right: 20%;
+  font-size: 16px;
+}
+.pelicula-img{
+  height: 200px;
+}
+.pelicula-title{
+  font-size: 15px;
+}
+.pelicula-resume{
+  font-size: 13px;
 }
 .media {
   height: 110px;
