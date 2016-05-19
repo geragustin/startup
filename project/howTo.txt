@@ -18,3 +18,4 @@ Popular - Sort all movies by Rate ("imdbRating")
 Recent - Sort all movies by Date ("Released")
 
 Input text box - Search for any title/ director/actor with the specified word when you press "enter".
+Select option - Sort the movies by Genre (if you click in the "Choose a Genre" option, the list will be display all the movies)
