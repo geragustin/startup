@@ -1,0 +1,20 @@
+To run the project is necessary to start the servidor.js
+*Open your console and navigate to the project folder.
+*Type "node server.js"
+If everything works, a text will appear on the console ("The website is running on port: 3000")
+*To enter in the website open a internet browser and type "127.0.0.1:3000"
+
+------------------------------
+
+List of all movies in .JSON - 127.0.0.1:3000/movieList
+
+Index.html - 127.0.0.1:3000/#/ 
+*Use the main.html template
+
+movies.html (template) - 27.0.0.1:3000/#/movies
+*Have many filters for the list of movies.
+All - Sort all movies with any filter.
+Popular - Sort all movies by Rate (imdbRating)
+Recent - Sort all movies by Date (Released)
+
+Input text box - Search for any title/ director/actor with the specified word when you press "enter".

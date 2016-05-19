@@ -1,0 +1,29 @@
+<section>
+	<button ng-click="allMovies();">All</button>
+	<button ng-click="byRate();">Popular</button>
+	<button ng-click="byDate();">Recent</button>
+</section>
+<section>
+ <input type="text" ng-model="iText" ng-keypress="filter($event);" placeholder="Search a title/director/actor"/>
+</section>
+<div>
+<div class="img" ng-repeat="movie in movies">
+<ul>
+<li>
+<strong>ID:</strong>{{movie.id}}
+<br>
+<strong>Title:</strong>{{movie.Title}}
+<br>
+<strong>Director:</strong>{{movie.Director}}
+<br>
+<strong>Actors:</strong>{{movie.Actors}}
+<br>
+<strong>Rate:</strong>{{movie.imdbRating}}
+<br>
+<strong>Released:</strong>{{movie.Released}}
+<br>
+<strong>Genre:</strong>{{movie.Genre}}
+</li>
+</ul>
+</div>
+</div>
