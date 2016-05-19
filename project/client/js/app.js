@@ -1,4 +1,4 @@
-angular.module("movieApp",["ngRoute"])
+angular.module("movieApp",["ngRoute", "angular.filter"])
 .config(function($routeProvider){
 	$routeProvider
 	.when("/",{

@@ -6,10 +6,14 @@
 <section>
  <input type="text" ng-model="iText" ng-keypress="filter($event);" placeholder="Search a title/director/actor"/>
 </section>
-<div>
-<div class="img" ng-repeat="movie in movies">
+<section>
+  <select name="show-filter" ng-model="catFilter" 
+    ng-options="movie as movie.Genre for movie in movies | unique:'Genre'">
+     <option value="">Choose a Genre</optipn>
+  </select>
+</section>
+<div ng-repeat="movie in movies | filter : {Genre: catFilter.Genre}: false">
 <ul>
-<li>
 <strong>ID:</strong>{{movie.id}}
 <br>
 <strong>Title:</strong>{{movie.Title}}
@@ -23,7 +27,6 @@
 <strong>Released:</strong>{{movie.Released}}
 <br>
 <strong>Genre:</strong>{{movie.Genre}}
-</li>
 </ul>
 </div>
 </div>

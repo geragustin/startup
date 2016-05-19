@@ -13,8 +13,8 @@ Index.html - 127.0.0.1:3000/#/
 
 movies.html (template) - 27.0.0.1:3000/#/movies
 *Have many filters for the list of movies.
-All - Sort all movies with any filter.
-Popular - Sort all movies by Rate (imdbRating)
-Recent - Sort all movies by Date (Released)
+All - Sort all movies with by "id".
+Popular - Sort all movies by Rate ("imdbRating")
+Recent - Sort all movies by Date ("Released")
 
 Input text box - Search for any title/ director/actor with the specified word when you press "enter".
