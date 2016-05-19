@@ -1,3 +1,5 @@
 18/06 - Structure folders partially created server/client side.
 	Some filters are done, just need to do the <select> for genre filter.
 19/06 - Added the filter by Genre.
+
+

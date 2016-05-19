@@ -7,12 +7,12 @@
  <input type="text" ng-model="iText" ng-keypress="filter($event);" placeholder="Search a title/director/actor"/>
 </section>
 <section>
-  <select name="show-filter" ng-model="catFilter" 
+  <select name="show-filter" ng-model="genFilter" 
     ng-options="movie as movie.Genre for movie in movies | unique:'Genre'">
      <option value="">Choose a Genre</optipn>
   </select>
 </section>
-<div ng-repeat="movie in movies | filter : {Genre: catFilter.Genre}: false">
+<div ng-repeat="movie in movies | filter : {Genre: genFilter.Genre}: false">
 <ul>
 <strong>ID:</strong>{{movie.id}}
 <br>

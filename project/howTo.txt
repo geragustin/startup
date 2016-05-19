@@ -7,6 +7,7 @@ If everything works, a text will appear on the console ("The website is running 
 ------------------------------
 
 List of all movies in .JSON - 127.0.0.1:3000/movieList
+If you want to see a specific movie - 127.0.0.1/movieList/:id (replace for "id" of any movie)
 
 Index.html - 127.0.0.1:3000/#/ 
 *Use the main.html template

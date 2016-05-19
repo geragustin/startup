@@ -70,4 +70,6 @@ var match = [];
  }
 };
 //Working functions end here.
+  $scope.movies
+  $scope.Genre = "Filter Based on Select Value";
 });
