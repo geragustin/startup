@@ -1,43 +1,74 @@
 var express = require('express'),
-url = require('url'),
 app = express(),
-movies = require("./server/data/data.js"),
+fs = require("fs"),
+url = require('url'),
+bodyParser = require('body-parser'),
+http = require('http'),
+request = require('request'),
 port = 3000;
 
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 app.use(express.static(__dirname +'/client'));                 // set the static files location
 app.get('/', function (req, res) {
- res.sendFile(__dirname + '/client/index.html');
+    res.sendFile(__dirname + '/client/index.html');
+});
+
+app.post('/addMovie', function(req,res){
+    fs.readFile(__dirname + '/server/data/movies.json' , 'utf8', function (err, data) {
+        if (err) throw err;
+        var dataMovies = JSON.parse(data);
+ 
+        dataMovies.push(req.body);
+
+        fs.writeFile(__dirname + '/server/data/movies.json', JSON.stringify(dataMovies), function(err) {
+            if(err) {
+                return console.log(err);
+            }
+            console.log("The movie " + req.body.Title + " was added!");
+            res.redirect('/#/main');
+        });
+
+    });    
 });
 
 app.get('/movies', function (req, res) {
-   var queryObj = queryToObj(req.url);
-   if (queryObj.search == 'searchmov') {
-        var movies = searchMovies(dataMovies, queryObj.Search);
-        res.end(JSON.stringify(movies));
-    }
-    else if (queryObj.search == 'order') {
-        var movies = filter(dataMovies, queryObj.by);
-        res.end(JSON.stringify(movies));
-    }
-    else if (queryObj.search == 'lastmov') {
-        var movies = lastMovies(dataMovies,3);
-        res.end(JSON.stringify(movies));
-    }
-    else if (queryObj.search == 'id') {
-        var movies = searchByID(dataMovies, queryObj.id);
-        res.end(JSON.stringify(movies));
-    }
-    else if (queryObj.search == 'gen') {
-        var movies = searchByGenre(dataMovies, queryObj.gen);
-        res.end(JSON.stringify(movies));
-    }
-    else if (queryObj == 'err') {
-        res.end('noQuery');
-    }
+
+    fs.readFile(__dirname + '/server/data/movies.json', 'utf8', function (err, data) {
+        if (err) throw err;
+
+        var dataMovies = JSON.parse(data);
+        var queryObj = queryToObj(req.url);
+
+        if (queryObj.search == 'searchmov') {
+            var movies = searchMovies(dataMovies, queryObj.Search);
+            res.end(JSON.stringify(movies));
+        }
+        else if (queryObj.search == 'order') {
+            var movies = filter(dataMovies, queryObj.by);
+            res.end(JSON.stringify(movies));
+        }
+        else if (queryObj.search == 'lastmov') {
+            var movies = lastMovies(dataMovies,3);
+            res.end(JSON.stringify(movies));
+        }
+        else if (queryObj.search == 'id') {
+            var movies = searchByID(dataMovies, queryObj.id);
+            res.end(JSON.stringify(movies));
+        }
+        else if (queryObj.search == 'gen') {
+            var movies = searchByGenre(dataMovies, queryObj.gen);
+            res.end(JSON.stringify(movies));
+        }
+        else if (queryObj == 'err') {
+            res.end('noQuery');
+        }
+    });
 });
 
 app.listen(port);
 console.log("The website is running on port: "+port);
+
 function queryToObj(query) {
 	var parsed = url.parse(query);
 	if (parsed.query) {
@@ -109,13 +140,3 @@ function searchByGenre(obj,query) {
     }
     return rest;
 }
-// http://localhost:3000/xxx/test=cosas
-// http://localhost:3000/xxx/test=cosas?ss=ccc
-app.get('/xxx/test:cosa', function (req, res) {
-    res.end(JSON.stringify({a: req.params, b: req.query}));
-});
-// http://localhost:3000/xxx/string?param_1=1&param_2=2
-app.get('/xxx/string', function (req, res) {
-    res.end(JSON.stringify({a: req.params, b: req.query}));
-});
-var dataMovies = movies.movies;

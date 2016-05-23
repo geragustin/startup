@@ -1,0 +1,16 @@
+For start the node server need to install all te node_modules first.
+- Run your cmd, select the server folder and write npm install.
+- After that, write "node app.js"
+- For enter in the website need to write your localhost ip and :3000 (port used for that project)
+
+-----------------------
+If you want to listen all the movis in JSON file, can write: 127.0.0.1:3000/movies?search=order&by=all can change the "all" for "recent" or "popular" if u want sort the movis by year or by imdbRating.
+
+If you want to search writen a text use: http://127.0.0.1:3000/movies?search=searchmov&Search="text" replace the "text" for any word for search a movie/director or actor.
+
+To search all movies by a specific genre use: http://127.0.0.1:3000/movies?search=gen&gen="genre" and replace the "genre" for any genre movie, like Action.
+
+Movies by id can be founded here: http://127.0.0.1:3000/movies?search=id&id="id" just need to replace the "id" for any number, like 5.
+
+To add a new movie need to write 127.0.0.1:/#/addMovie, write all the values in form and click in Add.
+The movie will be saved in the movies.json file.

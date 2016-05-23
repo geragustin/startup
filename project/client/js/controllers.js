@@ -1,11 +1,11 @@
 angular.module('movieApp')
-.controller('movieListCtrl', ['$scope', 'movies', function ($scope, movies) {
-	movies.get('movies?search=order&by=all')
+.controller('movieListCtrl', ['$scope', '$http', function ($scope, $http) {
+	$http.get('movies?search=order&by=all')
 		.success(function(data) {
 			$scope.movies = data;
 		});
 	$scope.sendRequest = function(url) {
-		movies.get(url)
+		$http.get(url)
 			.success(function(data) {
 				$scope.movies = data;
 			});
@@ -14,7 +14,7 @@ angular.module('movieApp')
 	$scope.search = '';
 
 	$scope.searchMov = function() {
-		movies.get('movies?search=searchmov&Search='+$scope.search)
+		$http.get('movies?search=searchmov&Search='+$scope.search)
 			.success(function(data) {
 				$scope.movies = data;
 			});
@@ -26,14 +26,14 @@ angular.module('movieApp')
 		var select = elem[0];
 		var index = select.selectedIndex;
 		var genre = select[index].value;
-		movies.get('movies?search=gen&gen='+genre)
+		$http.get('movies?search=gen&gen='+genre)
 			.success(function(data) {
 				$scope.movies = data;
 			});
 	};
 }])
-.controller('mainCtrl', ['$scope', 'movies', function ($scope, movies) {
-	movies.get('movies?search=lastmov')
+.controller('mainCtrl', ['$scope', '$http', function ($scope, $http) {
+	$http.get('movies?search=lastmov')
 		.success(function(data) {
 			$scope.movies = data;
 		});
@@ -46,10 +46,13 @@ angular.module('movieApp')
 				console.log($scope.movie)
 			});
 }])
-.controller('addCtrl',function($scope){
-        $scope.newMovie = {};
-
-    	$scope.submit = function() {   
-        console.log(this.newMovie);
+.controller('addCtrl',['$scope', '$http', function ($scope, $http) {
+    $scope.newMovie = {};
+    $scope.submit = function() {
+    	$http.post('addMovie', this.newMovie)
+    		.success(function(){
+    			console.log("movie added")
+    			location.hash = "/main";
+    		});
     };
-})
+}])
