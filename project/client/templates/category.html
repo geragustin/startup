@@ -1,0 +1,28 @@
+<section class="container">
+<div class="navigation">
+<ul class="nav-bar">
+	<li><button ng-click="sendRequest('movies?search=order&by=all')">All</button></li>
+	<li><button ng-click="sendRequest('movies?search=order&by=popular')">byRate</button></li>
+	<li><button ng-click="sendRequest('movies?search=order&by=recent')">byDate</button></li>
+</ul>
+<input class="searchtext" type="text" ng-model="search" placeholder="Write Title/Director/Actor" ng-keypress="searchMov()">
+<form id="genreFilter">
+        <select name="type"  ng-click="searchByGenre()">
+        <option value="">Choose a Genre</option>
+        <option value="Crime">Crime</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Horror">Horror</option>
+        </select>
+</form>
+</div>
+	<ul class="pelicula-cuerpo" ng-repeat="movie in movies">
+		<a href="#/movie/{{movie.id}}">
+		<li><img class="pelicula-img" ng-src="{{movie.Poster}}"></li>
+		<li class="pelicula-title">{{movie.Title}}</li>
+		<li class="pelicula-resume">{{movie.Year}}</li>
+		</a>
+	</ul>
+</section>

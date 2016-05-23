@@ -1,0 +1,12 @@
+<section class="container">
+		<h1 class="title">{{movie.Title}}</h1>
+		<div><img class="pelicula" ng-src="{{movie.Poster}}"></div>
+		<p id="descripcion">
+		Resume: {{movie.Plot}}<br>
+		Director: {{movie.Director}}<br>
+		Actors: {{movie.Actors}}
+		</p>
+		<div><img  class="poster" src="img/promo.png"></div>
+		<div class="calificacion">Movie popularity: {{movie.imdbRating}}</div>
+		<iframe class="trailer" src="https://www.youtube.com/embed/wwcSki7r9cQ" frameborder="0" allowfullscreen></iframe>
+</section>

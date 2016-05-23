@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="css/normalize.css">
+ <link rel="stylesheet" href="css/style-index.css">
+ <link rel="stylesheet" href="css/style-category.css">
+ <link rel="stylesheet" href="css/style-movie.css">
+ <link rel="stylesheet" href="css/style-add.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Globant Project</title>
+</head>
+<body ng-app="movieApp"> <!-- Here lad my app -->
+<!-- Header -->
+<header class="main-header">
+			<ul>
+				<li><a href="#/">Home</a></li>
+				<li><a href="#/movielist">Movies</a></li>
+				<li><a href="">Help</a></li>
+				<li><a href="">About Us</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</nav>
+</header>
+<!-- ng-view for see template content -->
+<div ng-view></div>
+<!-- Footer -->
+<footer class="footer-container">
+ <div class="media"></div>
+ <div class="box"></div>
+ <div class="box"></div>
+ <p id="copyright"> Copyright 2016</p>
+</footer>
+<!-- Scripts -->
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/factorys.js"></script>
+<script src="js/controllers.js"></script>
+</body>
+</html>

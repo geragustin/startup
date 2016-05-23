@@ -1,0 +1,234 @@
+*, *:before, *:after {
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+}
+a {
+ color: black;
+ text-decoration: none;
+}
+
+a:hover 
+{
+ color: pink; 
+ text-decoration:none; 
+ cursor:pointer;
+}
+/* Small screens (default) */
+@media (max-width: 639px){
+html {
+ font-size: 100%;
+ background-color: gray;
+}
+.main-header{
+ height: 200px;
+}
+.main-header ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+.main-header li a {
+ display: block;
+ text-align: center;
+ width: 100%;
+ text-decoration: none;
+ padding: 10px;
+ margin-top: 0.5%;
+ border: 1px solid black;
+ border-radius: 15px;
+}
+
+.navigation {
+ clear: left;
+ top: 5%;
+ width: 100%;
+ height: 30px;
+ margin-top: 5%;
+}
+.navigation .nav-bar {
+ list-style-type: none;
+ margin: 0;
+ margin-left: 18%;
+}
+.navigation .nav-bar li {
+ float: left;
+ width: 100px;
+ background-color: blue;
+ border-top: 1px solid black;
+ border-right: 1px solid black;
+ border-bottom: 1px solid black;
+ margin-top: 0.2%;
+ margin-bottom: 2%;
+ font-size: 13px;
+ text-align: center;
+}
+.navigation .nav-bar li:first-of-type{
+ border-left: 1px solid black;
+}
+.navigation button {
+  width: 100%;
+}
+.navigation form {
+ clear: left;
+ margin-left: 40%;
+ font-size: 13px;
+}
+
+.searchtext{
+  clear: left;
+  width: 38%;
+  height: 20px;
+  margin: 0.2%;
+  margin-left: 30%;
+}
+.pelicula-cuerpo {
+ width: 50%;
+ list-style-type: none;
+ position: relative;
+ margin-top: 10%;
+ margin-bottom: 5%;
+ margin-left: 20%;
+ margin-right: 25%;
+}
+.pelicula-img{
+ width: 100%;
+ height: 200px;
+ background-color: red;
+}
+.pelicula-title{
+ font-size: 15px;
+ font-style: italic;
+}
+.pelicula-resume{
+ font-size: 13px;
+ font-style: italic;
+}
+.media {
+ width: 80%;
+ height: 200px;
+ align-content: center;
+ background-color: red;
+ margin-left: 10%;
+}
+.box {
+ float: left;
+ width: 40%;
+ height: 150px;
+ align-content: center;
+ background-color: green;
+ margin-top: 7%;
+ margin-left: 5%;
+ margin-right: 5%;
+ margin-bottom: 2%;
+}
+#copyright {
+ text-align: center;
+}
+}
+/* Medium screens (640px) */
+@media (min-width: 640px){
+.container {
+ width: 100%;
+ height: 480px;
+ background-color: gray;
+}
+.navigation {
+ position: relative;
+ top: 5%;
+ width: 100%;
+ height: 30px;
+ margin-bottom: -3%;
+}
+.navigation .nav-bar {
+ list-style-type: none;
+ margin: 0;
+}
+.navigation .nav-bar li {
+ float: left;
+ width: 80px;
+ background-color: blue;
+ border-top: 1px solid black;
+ border-right: 1px solid black;
+ border-bottom: 1px solid black;
+ margin-top: 0.2%;
+ font-size: 13px;
+ text-align: center;
+}
+.navigation .nav-bar li:first-of-type{
+ border-left: 1px solid black;
+}
+.navigation button {
+  width: 100%;
+}
+.navigation form {
+ float: right;
+ margin-top: -1.7%;
+ margin-right: 10%;
+ font-size: 13px;
+}
+.searchtext{
+  position: relative;
+  float: right;
+  width: 18%;
+  height: 20px;
+  margin: 0.2%;
+  font-size: 16px;
+  margin-right: 35%;
+}
+.pelicula-cuerpo {
+ float: left;
+ width: 15%;
+ list-style-type: none;
+ position: relative;
+ margin-top: 7%;
+ margin-bottom: -3%;
+}
+.pelicula-img{
+ height: 100px;
+ background-color: red;
+}
+.pelicula-title{
+ font-size: 15px;
+ font-style: italic;
+}
+.pelicula-resume{
+ font-size: 13px;
+ font-style: italic;
+}
+
+/* Large screens (1024px) */
+@media (min-width: 1024px){
+.container {
+ height: 600px;
+}
+.navigation .nav-bar {
+ list-style-type: none;
+ margin: 0;
+}
+.navigation .nav-bar li {
+ width: 120px;
+ font-size: 16px;
+}
+.navigation .nav-bar li:first-of-type{
+ border-left: 1px solid black;
+}
+.navigation form {
+ float: right;
+ margin-right: 20%;
+ font-size: 16px;
+}
+.navigation button {
+  width: 100%;
+}
+.pelicula-img{
+ width: 100%;
+ height: 170px;
+ background-color: red;
+}
+.pelicula-title{
+ font-size: 17px;
+}
+.pelicula-resume{
+ font-size: 15px;
+}

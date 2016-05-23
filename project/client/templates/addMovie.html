@@ -1,0 +1,35 @@
+<div class="overlay"></div>
+  <div class="modal">
+  <header class="peli"><h2>Nueva Pelicula<h2></header>
+  <form ng-submit="submit()">
+  <a id="titulo">Titulo </a><input type="text" class="titulo" ng-model="newMovie.Title">
+  <a id="estreno">Fecha de Estreno <input type="date" class="fecha" ng-model="newMovie.Released"></a>
+  <a id="categoria">Categoria 
+    <select>
+                     <option value="Crime">Crime</option>
+                     <option value="Action">Action</option>
+                     <option value="Drama">Drama</option>.
+                     <option value="Adventure">Adventure</option>
+                     <option value="Comedy">Comedy</option>
+                     <option value="Horror">Horror</option>
+                  </select ng-model="newMovie.Genre">
+    </a>
+   <a id="puntos">Calificacion <input type="range" min="0" max="13" value="0" ng-model="newMovie.imdbRating">
+    </a><br><br>
+  <a id="descripcion">Descripcion <br>
+  <textarea class="description" rows="4" cols="70" ng-model="newMovie.Plot"></textarea></a>
+  <br><br><br><br><br><br>
+  <div class="botones"><input type="submit" value="Add"> <input type="reset" value="Clear"></div></input>
+  </form>
+  </div ng-controller="mainCtrl">
+    <section class="container">
+        <div class="estreno"></div>
+        <div class="estreno"></div>
+        <div class="estreno"></div>
+        <div class="banner"></div>
+        <div class="texto">
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
+        </p>
+        </div>
+</section>
