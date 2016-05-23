@@ -28,7 +28,6 @@ app.get('/movies', function (req, res) {
         res.end(JSON.stringify(movies));
     }
     else if (queryObj.search == 'gen') {
-        console.log('entre a searchgen');
         var movies = searchByGenre(dataMovies, queryObj.gen);
         res.end(JSON.stringify(movies));
     }
